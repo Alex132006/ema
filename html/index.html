@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ema</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fas fas fas fa-shopping-basket"></i>
+                <span>Ema</span>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#catalogues">Catalogues</a></li>
+                    <li><a href="#categories">Catégories</a></li>
+                    <li><a href="../html/nouveaute.html">Nouveautés</a></li>
+                    <li><a href="../html/contact.html">Contact</a></li>
+                    <li><a href="#" class="contact-btn" id="contactHeaderBtn">Contact Rapide</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Découvrez nos 100 catalogues de produits</h1>
+            <!-- <p>Trouvez exactement ce que vous cherchez parmi nos milliers de produits classés par catégories. Partagez facilement vos découvertes avec vos clients.</p> -->
+
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Rechercher un produit...">
+                <button id="searchBtn"><i class="fas fa-search"></i> Rechercher</button>
+            </div>
+
+            <div class="categories">
+                <button class="category-btn active" data-category="all">Tous</button>
+                <button class="category-btn" data-category="high-tech">Viande</button>
+                <button class="category-btn" data-category="maison">Pooissons</button>
+                <button class="category-btn" data-category="mode">Legume</button>
+                <button class="category-btn" data-category="sport">conserves</button>
+                <button class="category-btn" data-category="fruits">Fruits</button>
+                <button class="category-btn" data-category="beaute">Beauté</button>
+                <!-- <button class="category-btn" data-category="automobile">Beauté</button> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalogues Section -->
+    <section class="catalogues-section" id="catalogues">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Catalogues</h2>
+                <!-- <p>Parcourez notre sélection de 100 catalogues spécialisés. Cliquez sur "Partager" pour envoyer un lien produit à un client.</p> -->
+            </div>
+
+            <div class="catalogues-grid" id="cataloguesGrid">
+                <!-- Les catalogues seront générés par JavaScript -->
+            </div>
+
+            <div style="text-align: center;">
+                <button class="btn btn-primary" id="loadMoreBtn">
+                    <i class="fas fa-plus"></i> Charger
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de partage -->
+    <div class="modal" id="shareModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Partager ce produit</h3>
+                <button class="close-modal" id="closeModalBtn">&times;</button>
+            </div>
+
+            <div class="link-preview">
+                Lien à partager: <br>
+                <a href="#" id="productLink">https://multicatalog.com/produit/123</a>
+            </div>
+
+            <form id="shareForm">
+                <div class="form-group">
+                    <label for="clientName">Nom du client *</label>
+                    <input type="text" id="clientName" required placeholder="Ex: Jean Dupont">
+                </div>
+
+                <div class="form-group">
+                    <label for="clientEmail">Email du client *</label>
+                    <input type="email" id="clientEmail" required placeholder="exemple@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message personnalisé</label>
+                    <textarea id="message"
+                        placeholder="Bonjour, je vous envoie ce lien concernant le produit qui pourrait vous intéresser..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-accent" style="width: 100%;">
+                    <i class="fas fa-paper-plane"></i> Envoyer le lien au client
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Ema</h4>
+                    <p>Plateforme de référence pour les produits africains.</p>
+                    <div style="margin-top: 20px;">
+                        <button class="btn btn-accent" id="contactFooterBtn">
+                            <i class="fas fa-envelope"></i> Contact
+                        </button>
+                    </div>
+                </div>
+
+                <!-- <div class="footer-column">
+                    <h4>Catégories populaires</h4>
+                    <ul>
+                        <li><a href="#">Électronique & High-Tech</a></li>
+                        <li><a href="#">Meubles & Décoration</a></li>
+                        <li><a href="#">Vêtements & Accessoires</a></li>
+                        <li><a href="#">Cosmétiques & Soins</a></li>
+                        <li><a href="#">Équipement sportif</a></li>
+                    </ul>
+                </div> -->
+
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-phone" style="margin-right: 10px;"></i> +7 930 334 89 96</li>
+                        <li><i class="fas fa-envelope" style="margin-right: 10px;"></i> essongapea.b.a@gmail.com</li>
+                        <!-- <li><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Non dispo -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- <div class="footer-bottom">
+                <p>&copy; 2023 MultiCatalog. Tous droits réservés.</p>
+            </div> -->
+        </div>
+    </footer>
+
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
