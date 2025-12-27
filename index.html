@@ -59,13 +59,6 @@
                 <span>Hébergement</span>
             </a>
         </div>
-
-        <div class="footer-note">
-            <!--<p>EMA Services - Tous droits réservés © 2023</p>
-             <p style="margin-top: 10px; font-size: 0.7rem; color: #666;">
-                Cliquez sur un service pour être redirigé vers notre partenaire
-            </p> -->
-        </div>
     </div>
 
     <script>
@@ -93,16 +86,16 @@
         });
 
         // Message de confirmation pour l'utilisateur
-        document.querySelectorAll('.btn').forEach(link => {
-            link.addEventListener('click', function (e) {
-                const serviceName = this.querySelector('span').textContent;
-                const confirmation = confirm(`Vous allez être redirigé vers notre service ${serviceName}. Continuer?`);
+        // document.querySelectorAll('.btn').forEach(link => {
+        //     link.addEventListener('click', function (e) {
+        //         const serviceName = this.querySelector('span').textContent;
+        //         const confirmation = confirm(`Vous allez être redirigé vers notre service ${serviceName}. Continuer?`);
 
-                if (!confirmation) {
-                    e.preventDefault();
-                }
-            });
-        });
+        //         if (!confirmation) {
+        //             e.preventDefault();
+        //         }
+        //     });
+        // });
     </script>
 </body>
 
