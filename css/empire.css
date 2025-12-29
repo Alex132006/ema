@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #000000;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contnair {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.titre {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.titre h2 {
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, #ffffff, #a0a0a0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+.titre h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background: #e936b1;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+}
+
+.img {
+    width: 120%;
+    height: 100%;
+
+}
+
+.footer-note {
+    text-align: center;
+    margin-top: 40px;
+    color: #888;
+    font-size: 0.8rem;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .titre h2 {
+        font-size: 2rem;
+    }
+
+    .titre p {
+        font-size: 0.85rem;
+        padding: 0 10px;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+    }
+
+    .btn {
+        min-height: 70px;
+        padding: 12px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titre h2 {
+        font-size: 1.8rem;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+    }
+
+    .btn {
+        min-height: 65px;
+        padding: 10px 12px;
+    }
+
+    .btn i {
+        font-size: 1.3rem;
+        margin-bottom: 6px;
+    }
+
+    .btn span {
+        font-size: 0.85rem;
+    }
+}
